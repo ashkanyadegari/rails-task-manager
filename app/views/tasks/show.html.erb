@@ -1,10 +1,10 @@
 <h1><%=  @task.title %></h1>
 <p><%= @task.details %></p>
 <p><input type="checkbox" <%= @status %>><%= @message %></p>
-<%= link_to "Back to list", root_path  %>
-<%= link_to "Edit Task", edit_task_path(@task.id)  %>
+<%= link_to "Back to list", root_path, :class => "btn btn-primary m-1"  %>
+<%= link_to "Edit Task", edit_task_path(@task.id), :class => "btn btn-primary m-1"%>
 
 <%= link_to 'delete',
   delete_task_path(@task),
   data: { confirm: 'Are you sure?' },
-  method: :delete %>
+  method: :delete , :class => "btn btn-danger m-1"%>

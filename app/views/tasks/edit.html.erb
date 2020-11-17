@@ -1,9 +1,6 @@
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
+<%= simple_form_for(@task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
   <%= f.check_box :completed%>
-  <%= f.submit %>
+  <%= f.submit :class => "btn btn-primary" %>
 <% end %>
