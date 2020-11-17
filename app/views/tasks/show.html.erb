@@ -1,6 +1,6 @@
 <h1><%=  @task.title %></h1>
 <p><%= @task.details %></p>
-<p><input type="checkbox"><%= @message %></p>
+<p><input type="checkbox" value="<%= @task.completed == true %>"><%= @message %></p>
 <%= link_to "Back to list", root_path  %>
 <%= link_to "Edit Task", edit_task_path(@task.id)  %>
 
