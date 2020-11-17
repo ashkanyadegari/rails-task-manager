@@ -11,6 +11,7 @@ class TasksController < ApplicationController
       else
         @message = "Task is already completed"
       end
+      @task.completed ? @status = "checked" : @status = "value"
     end
 
     def new
